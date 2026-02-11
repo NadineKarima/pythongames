@@ -1,0 +1,290 @@
+/* =========================
+   GLOBAL POPUP BACKDROP
+========================= */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* =========================
+   PANEL POPUP / FORM
+========================= */
+.panel {
+    background: #8fb48a;
+    padding: 25px;
+    text-align: center;
+    border-radius: 18px;
+    width: 450px;
+    max-width: 90%;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+
+.popup-image {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Title */
+.title {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 18px;
+    color: #0c4223;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   INSTRUCTION BOX
+========================= */
+.instruction-box {
+    background: #c8dec3;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #aacbaa;
+    text-align: left;
+}
+
+.instruction-box h2 {
+    margin: 0 0 8px 0;
+    color: #114524;
+    font-size: 18px;
+}
+
+.instruction-box ul {
+    list-style-position: inside;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.instruction-box li {
+    margin: 4px 0;
+    color: #0e2717;
+}
+
+/* =========================
+   INPUT FIELD
+========================= */
+input[type="text"] {
+    width: 90%;
+    display: block;
+    margin: 10px auto 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #99b499;
+    background: #edf7ed;
+    font-size: 16px;
+}
+
+/* =========================
+   DEFAULT BUTTON
+========================= */
+.btn {
+    background: #3b82c4;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:not(:disabled):hover {
+    background: #5d96d4;
+}
+
+.btn:not(:disabled):active {
+    background: #0069d9;
+}
+
+.btn:disabled {
+    background: #b7c9dd;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* =========================
+   PLAY BUTTON (SPECIAL)
+========================= */
+.play-btn {
+    background: #0069d9 !important;
+}
+
+.play-btn:hover {
+    background: #0b7cff !important;
+}
+
+.play-btn:active {
+    background: #004c9e !important;
+}
+
+/* =========================
+   GAME SECTION
+========================= */
+body {
+    background: #2e2e2e;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container UI */
+#gameUI {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+    margin: 20px auto;
+    color: white;
+    font-size: 19px;
+}
+
+/* TOP BAR: Title, Scores, Timer */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.left-ui, .right-ui {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-weight: bold;
+    color: #b7f5bf;
+}
+
+.game-title {
+    font-size: 26px;
+    color: #d6ffe3;
+    font-weight: 900;
+}
+
+/* Canvas board */
+#canvas {
+    display: block;
+    margin: 0 auto;
+    background: #111;
+    border: 3px solid #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    width: 100%;
+    max-width: 960px;
+}
+
+/* =========================
+   REWIND BOX
+========================= */
+.rewind-box {
+    margin-top: 15px;
+    background: linear-gradient(145deg, #b4d4b4, #8fb48a);
+    padding: 15px 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+    color: #0c4223;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+}
+
+.rewind-box:hover {
+    transform: translateY(-3px);
+}
+
+/* Slider */
+#rewindSlider {
+    width: 100%;
+    margin-top: 10px;
+    -webkit-appearance: none;
+    height: 8px;
+    border-radius: 5px;
+    background: #3b82c4;
+    outline: none;
+    transition: 0.2s;
+}
+
+#rewindSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0069d9;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: 0.2s;
+}
+
+#rewindSlider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #0069d9;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Rewind button */
+#rewindBtn {
+    margin-top: 12px;
+    background: #0069d9;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#rewindBtn:hover {
+    background: #0b7cff;
+}
+
+#rewindBtn:active {
+    background: #004c9e;
+}
+
+/* =========================
+   GAME OVER POPUP
+========================= */
+#gameOverPopup .panel {
+    background: #8fb48a;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 500px) {
+    #canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .rewind-box {
+        width: 95%;
+        padding: 12px 15px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
